@@ -1,0 +1,29 @@
+// Variables
+$primary-color: #047aed;
+$secondary-color: #1c3fa8;
+$dark-color: #002240;
+$light-color: #f4f4f4;
+$success-color: #5cb85c;
+$error-color: #d9534f;
+$white-color: #fff;
+$black-color: #000;
+
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return $dark-color;
+  } @else {
+    @return $white-color;
+  }
+}
+
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+@mixin set-transform($value) {
+  transform: $value;
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
+}
