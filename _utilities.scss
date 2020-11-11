@@ -36,6 +36,18 @@
   @include set-background($error-color);
 }
 
+.active {
+  color: $active-color !important;
+}
+
+.badge {
+  position: absolute;
+  right: 0;
+  top: 0;
+  @include set-background($dark-color);
+  padding: 0.5rem 0.9rem;
+}
+
 // Spacing
 
 $spaceamounts: (1, 2, 3, 4, 5, 6);
@@ -44,25 +56,44 @@ $spaceamounts: (1, 2, 3, 4, 5, 6);
   .m-#{$space} {
     margin: #{$space}rem;
   }
-
   .my-#{$space} {
     margin: #{$space}rem 0;
   }
-
   .mx-#{$space} {
     margin: 0 #{$space}rem;
   }
-
+  .mt-#{$space} {
+    margin: #{$space}rem 0 0 0;
+  }
+  .mr-#{$space} {
+    margin: 0 #{$space}rem 0 0;
+  }
+  .mb-#{$space} {
+    margin: 0 0 #{$space}rem 0;
+  }
+  .ml-#{$space} {
+    margin: 0 0 0 #{$space}rem;
+  }
   .p-#{$space} {
     padding: #{$space}rem;
   }
-
   .py-#{$space} {
     padding: #{$space}rem 0;
   }
-
   .px-#{$space} {
     padding: 0 #{$space}rem;
+  }
+  .pt-#{$space} {
+    padding: #{$space}rem 0 0 0;
+  }
+  .pr-#{$space} {
+    padding: 0 #{$space}rem 0 0;
+  }
+  .pb-#{$space} {
+    padding: 0 0 #{$space}rem 0;
+  }
+  .pl-#{$space} {
+    padding: 0 0 0 #{$space}rem;
   }
 }
 
@@ -70,15 +101,19 @@ $spaceamounts: (1, 2, 3, 4, 5, 6);
 
 .btn {
   display: inline-block;
-  padding: 0.4rem 1.5rem;
-  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.7rem 1.2rem;
   border: none;
   outline: none;
-  cursor: pointer;
-  @include set-background($primary-color);
+  margin-right: 0.5rem;
+
   &:hover {
     transform: scale(0.98);
   }
+}
+
+.btn-round {
+  border-radius: 5px;
 }
 
 .btn-outline {
@@ -143,6 +178,14 @@ $spaceamounts: (1, 2, 3, 4, 5, 6);
 
 .text-center {
   text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .text-primary {
