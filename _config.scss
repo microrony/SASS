@@ -1,12 +1,15 @@
-// Variables
+// Color Variables
 $primary-color: #047aed;
 $secondary-color: #1c3fa8;
 $dark-color: #002240;
 $light-color: #f4f4f4;
+$active-color: #e63946;
 $success-color: #5cb85c;
 $error-color: #d9534f;
 $white-color: #fff;
 $black-color: #000;
+
+// Function for set the text color vase on background color
 
 @function set-text-color($color) {
   @if (lightness($color) > 70) {
@@ -15,6 +18,8 @@ $black-color: #000;
     @return $white-color;
   }
 }
+
+// Mixin for use the function
 
 @mixin set-background($color) {
   background-color: $color;
