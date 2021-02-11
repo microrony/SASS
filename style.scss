@@ -1,7 +1,14 @@
 @import 'config';
 @import 'main';
 
+// Navbar
+.navbar .flex {
+  justify-content: space-between;
 
+  .menu-items {
+    display: none;
+  }
+}
 
 @import 'utilities';
 @import 'responsive';
